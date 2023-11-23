@@ -1,0 +1,12 @@
+<div class="container">
+<h1> Best movies of all times</h1>
+
+<%@lists.each do |list|%>
+<%= list.name %>
+ <p>
+        <%= link_to "Show this list", list %>
+      </p>
+<% end %>
+
+<%= link_to "Create a list", new_list_path %>
+</div>
