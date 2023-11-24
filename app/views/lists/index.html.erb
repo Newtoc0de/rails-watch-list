@@ -5,12 +5,12 @@
 <%= list.name %>
  <p>
         <%= link_to "Show this list", list %>
+        <%= cl_image_tag("owpyimwpe3stzz6we4alY", width: 400, height: 300, crop: :fill) %>
       </p>
 <% end %>
 
 <%= link_to "Create a list", new_list_path %>
 
-<%= cl_image_tag("owpyimwpe3stzz6we4alY",
-      width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag("owpyimwpe3stzz6we4alY", width: 400, height: 300, crop: :fill) %>
 
 </div>
