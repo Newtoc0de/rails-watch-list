@@ -3,6 +3,9 @@
 
 <%@lists.each do |list|%>
 <%= list.name %>
+<% list.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, width: 400, height: 300, crop: :fill %>
+  <% end %>
  <p>
         <%= link_to "Show this list", list %>
         <%= cl_image_tag("owpyimwpe3stzz6we4alY", width: 400, height: 300, crop: :fill) %>
@@ -10,7 +13,9 @@
 <% end %>
 
 <%= link_to "Create a list", new_list_path %>
-
+<% list.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, width: 400, height: 300, crop: :fill %>
+  <% end %>
 <%= cl_image_tag("owpyimwpe3stzz6we4alY", width: 400, height: 300, crop: :fill) %>
 
 </div>
