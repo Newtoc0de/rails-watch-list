@@ -1,5 +1,11 @@
+<div class="container">
+
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie, collection: Movie.order(:title)%>
-  <%= f.button :submit %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.association :list %>
+    <%= f.button :submit %>
 <% end %>
+</div>
