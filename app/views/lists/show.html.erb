@@ -2,15 +2,16 @@
 <h1><%= @list.name %></h1>
 </div>
 
+
 <% @list.bookmarks.each do |bookmark| %>
     <%= bookmark.comment %>
       <div>
         <%= bookmark.movie.title %>
         <img src= "<%= bookmark.movie.poster_url%>" width= "200" height="300" >
+        <%= link_to "supprimer le bookmark", bookmark_path(bookmark.id)%>
     </div>
 
-
 <div>
-<%= link_to "supprimer le bookmark", bookmark_path(bookmark.id)%>
+
 <% end %>
 </div>
